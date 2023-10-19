@@ -12,7 +12,7 @@ fn main() {
     match action.as_str() {
         "extract" => {
             extract(
-                "https://github.com/fivethirtyeight/data/blob/master/tennis-time/serve_times.csv?raw=true",
+                "https://github.com/fivethirtyeight/data/blob/master/births/US_births_2000-2014_SSA.csv?raw=true",
                 "data/serve_times.csv",
                 "data",
             );
