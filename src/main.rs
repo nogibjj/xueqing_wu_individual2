@@ -13,11 +13,11 @@ fn main() {
         "extract" => {
             extract(
                 "https://github.com/fivethirtyeight/data/blob/master/births/US_births_2000-2014_SSA.csv?raw=true",
-                "data/serve_times.csv",
+                "data/births.csv",
                 "data",
             );
         }
-        "transform_load" => match transform_load("data/serve_times.csv") {
+        "transform_load" => match transform_load("data/births.csv") {
             Ok(_) => println!("Data loaded successfully!"),
             Err(err) => eprintln!("Error: {:?}", err),
         },

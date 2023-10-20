@@ -38,11 +38,11 @@ pub fn transform_load(dataset: &str) -> Result<String> {
     conn.execute(
         " CREATE TABLE Birth (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            Year INTEGER,
-            Month INTEGER,
-            Day_Of_Month INTEGER,
-            Day_Of_Week INTEGER,
-            Births INTEGER)",
+            year INTEGER,
+            month INTEGER,
+            day_of_month INTEGER,
+            day_of_week INTEGER,
+            births INTEGER)",
         [],
     )?;
 
@@ -50,11 +50,11 @@ pub fn transform_load(dataset: &str) -> Result<String> {
 
     let mut stmt = conn.prepare(
         "INSERT INTO Birth (
-            Year,
-            Month,
-            Day_Of_Month,
-            Day_Of_Week,
-            Births
+            year,
+            month,
+            day_of_month,
+            day_of_week,
+            births
             ) 
             VALUES (?, ?, ?, ?, ?)",
     )?;
@@ -94,10 +94,10 @@ pub fn query(query: &str) -> Result<()> {
 
         for result in results {
             match result {
-                Ok((id, Year, Month, Day_Of_Month, Day_Of_Week, Births)) => {
+                Ok((id, year, month, day_of_month, day_of_week, births)) => {
                     println!(
-                        "Result: id={}, Year={}, Month={}, Day_Of_Month={}, Day_Of_Week={}, Births={}",
-                        id, Year, Month, Day_Of_Month, Day_Of_Week, Births
+                        "Result: id={}, year={}, month={}, day_of_month={}, day_of_week={}, births={}",
+                        id, year, month, day_of_month, day_of_week, births
                     );
                 }
                 Err(e) => eprintln!("Error in row: {:?}", e),
