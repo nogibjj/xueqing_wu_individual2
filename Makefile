@@ -49,19 +49,19 @@ transform_load:
 
 # Example: Create a database entry
 create:
-	cargo run query "INSERT INTO Birth (Year, Month, Day_Of_Month, Day_Of_Week, Births) VALUES ( 2000, 1, 1, 6, 9083);"
+	cargo run query "INSERT INTO Birth (year, month, day_of_month, day_of_week, births) VALUES ( 2000, 1, 1, 6, 9083);"
 
 # Example: Read from the database
 read:
-	cargo run query "SELECT * FROM ServeTimesDB WHERE server = 'John Doe';"
+	cargo run query "SELECT * FROM Birth WHERE year = 2000;"
 
 # Example: Update a database entry
 update:
-	cargo run query "UPDATE ServeTimesDB SET server='John Doe', seconds_before_next_point=40, day='2023-09-05', opponent='Jane Doe', game_score='30-40', sets=1, game='0-0' WHERE id=1;"
+	cargo run query "UPDATE Birth SET year=2000, month=1, day_of_month=1, day_of_week=1, births=9083 WHERE id=1;"
 
 # Example: Delete a database entry
 delete:
-	cargo run query "DELETE FROM ServeTimesDB WHERE id=3;"
+	cargo run query "DELETE FROM Birth WHERE id=3;"
 
 # Generate and push changes to GitHub
 generate_and_push:
