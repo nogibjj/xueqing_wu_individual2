@@ -64,7 +64,6 @@ pub fn transform_load(dataset: &str) -> Result<String> {
             Ok(record) => {
                 stmt.execute(&[
                     &record[0], &record[1], &record[2], &record[3], &record[4], &record[5],
-                    &record[6],
                 ])?;
             }
             Err(err) => {
