@@ -9,6 +9,9 @@ The goal of this project is to create ETL and query data using Rust.
 # Steps
 Use Github Copilot to translate from Python to Rust
 
+# Tests
+<img width="765" alt="Tests" src="https://github.com/nogibjj/xueqing_wu_individual2/assets/47194238/aebf79b1-4fe9-4be4-8909-6c7e73d5f509">
+
 ## References
 
 * [rust-cli-template](https://github.com/kbknapp/rust-cli-template)
