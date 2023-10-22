@@ -30,3 +30,7 @@ UPDATE Birth SET year=2000, month=1, day_of_month=1, day_of_week=1, births=9083 
 DELETE FROM Birth WHERE id=3;
 ```
 
+```sql
+SELECT * FROM Birth WHERE id = 3;
+```
+
