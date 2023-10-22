@@ -62,9 +62,7 @@ pub fn transform_load(dataset: &str) -> Result<String> {
     for result in rdr.records() {
         match result {
             Ok(record) => {
-                stmt.execute(&[
-                    &record[0], &record[1], &record[2], &record[3], &record[4],
-                ])?;
+                stmt.execute(&[&record[0], &record[1], &record[2], &record[3], &record[4]])?;
             }
             Err(err) => {
                 eprintln!("Error reading CSV record: {:?}", err);
